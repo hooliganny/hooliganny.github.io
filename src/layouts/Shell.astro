@@ -1,0 +1,11 @@
+---
+import CommonHead from "../components/CommonHead.astro";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <CommonHead title={title} />
+  <slot />
+</html>

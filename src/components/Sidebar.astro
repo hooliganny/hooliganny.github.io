@@ -1,0 +1,29 @@
+---
+const tabs = [
+  {
+    name: "Projects",
+    href: "/projects",
+    transitionName: "projects-nav",
+  },
+  { name: "About me", href: "/about-me", transitionName: "about" },
+  { name: "Posts", href: "/posts", transitionName: "posts" },
+  { name: "Back", href: "/", transitionName: "home" },
+];
+---
+
+{/* Make this a gradient or something more interesting */}
+<nav
+  class="w-1/6 bg-[#00635D]"
+  transition:name="nav"
+  transition:animate="slide"
+>
+  {
+    tabs.map((tab) => (
+      <div>
+        <a href={tab.href} transition:name={tab.transitionName}>
+          {tab.name}
+        </a>
+      </div>
+    ))
+  }
+</nav>
