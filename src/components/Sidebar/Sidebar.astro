@@ -1,4 +1,6 @@
 ---
+import Back from "./Back.astro";
+import NavItem from "./NavItem.astro";
 const tabs = [
   {
     name: "Projects",
@@ -7,7 +9,7 @@ const tabs = [
   },
   { name: "About me", href: "/about-me", transitionName: "about" },
   { name: "Posts", href: "/posts", transitionName: "posts" },
-  { name: "Back", href: "/", transitionName: "home" },
+  { name: "Home", href: "/", transitionName: "home" },
 ];
 ---
 
@@ -16,14 +18,21 @@ const tabs = [
   class="w-1/6 bg-[#00635D]"
   transition:name="nav"
   transition:animate="slide"
+  transition:persist
 >
   {
-    tabs.map((tab) => (
-      <div>
-        <a href={tab.href} transition:name={tab.transitionName}>
-          {tab.name}
-        </a>
-      </div>
-    ))
+    (
+      <>
+        {tabs.map((tab) => (
+          <NavItem
+            href={tab.href}
+            name={tab.name}
+            transitionName={tab.transitionName}
+          />
+        ))}
+
+        <Back name={"back"} />
+      </>
+    )
   }
 </nav>

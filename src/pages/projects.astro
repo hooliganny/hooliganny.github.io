@@ -1,14 +1,32 @@
 ---
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import Shell from "../layouts/Shell.astro";
+
+const allProjects = await getCollection("projects");
 ---
 
 <MainLayout title="Welcome to My Portfolio Site's Projects">
-  <h1>
-    Welcome to <span class="text-gradient" transition:name="projects">
-      My Projects
-    </span>
-  </h1>
+  <header class="flex flex-col gap-3">
+    <h2 class="text-3xl">
+      Welcome to <span class="text-gradient" transition:name="projects">
+        My Projects
+      </span>
+    </h2>
+    <h3 class="text-xl">See what I have done</h3>
+  </header>
 
-  <h2 class="">Here is where they will go</h2>
+  <section
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
+  >
+    {
+      allProjects.map((project) => (
+        <Card
+          title={project.data.title}
+          body={project.body.substring(0, 20)}
+          href={`./projects/${project.slug}`}
+        />
+      ))
+    }
+  </section>
 </MainLayout>

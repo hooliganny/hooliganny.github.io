@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: string;
+  href?: string;
+  transitionName?: string;
+}
+
+const { href, transitionName, name } = Astro.props;
+---
+
+<div>
+  <a
+    href={href}
+    {...transitionName
+      ? { ["transition:name"]: { transitionName } }
+      : ({} as { [key: string]: any })}
+  >
+    {name}
+  </a>
+</div>
