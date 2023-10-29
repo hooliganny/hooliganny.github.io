@@ -1,0 +1,29 @@
+---
+title: "Project Matched"
+date: 2023-02-17T18:41:56+13:00
+description: "My university capstone course"
+tags:
+  [
+    "Frontend",
+    "HTML",
+    "CSS",
+    "Vue",
+    "JS/TS",
+    "University",
+    "Figma",
+    "Jira",
+    "AWS",
+  ]
+---
+
+_Originally done in my last semester at the University of Auckland (July 2022 to November 2022)._
+
+## Overview
+
+For my capstone course, alongside 4 others, we built a responsive PWA that would link students from across the STEM faculties to projects that are owned by other students. These projects would be auto recommended by the backend through the user's interests and skills that they filled out as a part of the signup process. For a run-through, please see the YouTube video below.
+
+## What I Learnt
+
+Initially, I came into this project with a simple understanding of HTML, CSS, and JS, but throughout the experience I was able to: build up understanding and camaraderie with my team members - and learn how to best work with different types of people; start learning and using Vue; understand the difference between Agile and Waterfall frameworks of approaching task management; learn to prototype with Figma and implement these prototypes; host a site on an AWS S3 Bucket; learn best practises for collaborative Git/GitHub use (merge requests, etc.); work under the confines of a stakeholder and deadlines; and more.
+
+{{< youtube xVn4GwUbkQs >}}
