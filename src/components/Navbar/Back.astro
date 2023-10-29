@@ -12,7 +12,6 @@ const { name } = Astro.props;
 
 <script>
   const button = document.querySelector("#back");
-  console.log(button);
   button?.addEventListener("click", () => {
     history.back();
   });

@@ -2,6 +2,7 @@
 import Back from "./Back.astro";
 import NavItem from "./NavItem.astro";
 const tabs = [
+  { name: "Home", href: "/", transitionName: "home" },
   {
     name: "Projects",
     href: "/projects",
@@ -9,7 +10,6 @@ const tabs = [
   },
   { name: "About me", href: "/about-me", transitionName: "about" },
   { name: "Posts", href: "/posts", transitionName: "posts" },
-  { name: "Home", href: "/", transitionName: "home" },
 ];
 ---
 
@@ -31,7 +31,7 @@ const tabs = [
           />
         ))}
 
-        <Back name={"back"} />
+        <Back name={"Back"} />
       </>
     )
   }

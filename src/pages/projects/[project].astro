@@ -15,7 +15,10 @@ const entry = await getEntry("projects", Astro?.params?.project as string);
 const { Content } = (await entry?.render()) ?? {};
 ---
 
-<MainLayout title={`Project ${entry?.slug}`}>
+<MainLayout title={`${entry?.data.title} | hooliganny`}>
+  <h2 transition:name={entry?.data.title}>
+    {entry?.data.title}
+  </h2>
   <div class="flex flex-col">
     <Content />
   </div>
