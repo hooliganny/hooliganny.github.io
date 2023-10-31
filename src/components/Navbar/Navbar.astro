@@ -15,7 +15,7 @@ const tabs = [
 
 {/* Make this a gradient or something more interesting */}
 <nav
-  class="w-1/6 bg-[#00635D]"
+  class="w-1/6 bg-[#00635D] flex flex-col justify-between"
   transition:name="nav"
   transition:animate="slide"
   transition:persist
@@ -23,15 +23,19 @@ const tabs = [
   {
     (
       <>
-        {tabs.map((tab) => (
-          <NavItem
-            href={tab.href}
-            name={tab.name}
-            transitionName={tab.transitionName}
-          />
-        ))}
-
-        <Back name={"Back"} />
+        <div>
+          {tabs.map((tab) => (
+            <NavItem
+              href={tab.href}
+              name={tab.name}
+              transitionName={tab.transitionName}
+              transition:persist={false}
+            />
+          ))}
+        </div>
+        <div>
+          <Back name={"Back"} />
+        </div>
       </>
     )
   }

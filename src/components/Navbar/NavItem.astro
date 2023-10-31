@@ -6,9 +6,15 @@ interface Props {
 }
 
 const { href, transitionName, name } = Astro.props;
+const url = Astro.url.pathname;
 ---
 
-<div>
+<div
+  class:list={[
+    "py-6 text-lg",
+    url.includes(href) && href !== "/" && "bg-black",
+  ]}
+>
   <a
     href={href}
     {...transitionName

@@ -15,18 +15,17 @@ const { title, heading, subHeading } = Astro.props;
 <Shell title={title}>
   <body>
     <Navbar />
-    <main class="flex flex-col container p-10 gap-12">
+    <main class="flex flex-col container p-10 gap-12 overflow-y-auto">
       {
-        heading && subHeading ? (
+        heading && subHeading && (
           <header class="flex flex-col gap-3">
             <h2 class="text-3xl">{heading}</h2>
             <h3 class="text-xl">{subHeading}</h3>
           </header>
-        ) : (
-          <Back name="Back to projects" />
         )
       }
       <slot />
+      {!(heading && subHeading) && <Back name="Back to projects" />}
     </main>
   </body>
 </Shell>
@@ -34,6 +33,7 @@ const { title, heading, subHeading } = Astro.props;
 <style>
   body {
     display: flex;
-    @apply min-h-screen;
+    background-color: #13151a;
+    height: 100vh;
   }
 </style>

@@ -10,6 +10,11 @@ const highlightProject = allProjects.find((project) => project.data.highlight);
 const projects = allProjects.sort(
   (project1, project2) => project2.data.date - project1.data.date
 );
+
+function getRandomColSpan() {
+  // Generate a random number between 1 and 3 for colspan
+  return Math.floor(Math.random() * 3) + 1;
+}
 ---
 
 <MainLayout
@@ -28,18 +33,18 @@ const projects = allProjects.sort(
     )
   }
   <section
-    class="grid grid-cols-1 md:grid-cols-8 gap-5 md:[&>*:nth-child(odd)]:col-span-2 md:[&>*:nth-child(even)]:col-span-1 auto-cols-auto"
+    class="grid grid-cols-1 lg:grid-cols-8 xl:grid-cols-4 gap-5 md:[&>*:nth-child(odd)]:col-span-2 md:[&>*:nth-child(even)]:col-span-1 auto-cols-auto"
   >
     {
-      projects
-        .slice(1)
-        .map((project) => (
+      projects.slice(1).map((project) => (
+        <div style={{ gridColumn: `span ${getRandomColSpan()}` }}>
           <Card
             title={project.data.title}
             description={project.data.description}
             href={`./projects/${project.slug}`}
           />
-        ))
+        </div>
+      ))
     }
   </section>
 </MainLayout>
