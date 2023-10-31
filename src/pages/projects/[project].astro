@@ -1,6 +1,7 @@
 ---
 // import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
+import MarkdownContent from "../../components/MarkdownContent.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 
 export const getStaticPaths = async () => {
@@ -16,10 +17,10 @@ const { Content } = (await entry?.render()) ?? {};
 ---
 
 <MainLayout title={`${entry?.data.title} | hooliganny`}>
-  <h2 transition:name={entry?.data.title}>
+  <h2 transition:name={entry?.data.title} class="text-3xl">
     {entry?.data.title}
   </h2>
-  <div class="flex flex-col">
+  <MarkdownContent>
     <Content />
-  </div>
+  </MarkdownContent>
 </MainLayout>

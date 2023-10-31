@@ -1,3 +1,11 @@
+---
+title: "Future Projects"
+date: 2023-10-29T20:00:00+13:00
+tags: []
+description: "What's next for me"
+highlight: true
+---
+
 ## About this site
 
 Welcome to my mini-blog, here I will post any significant updates to my portfolio. Each post will have corresponding tags, and links to the right places (if applicable).
