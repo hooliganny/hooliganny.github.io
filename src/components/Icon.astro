@@ -1,0 +1,34 @@
+---
+import projectMatched from "../icons/project-matched.svg";
+import doomsdayRule from "../icons/doomsday-rule.svg";
+import hugoSite from "../icons/hugo-site.svg";
+import futureProjects from "../icons/future-projects.svg";
+import safefood4u from "../icons/safefood4u.svg";
+import { Image } from "astro:assets";
+interface Props {
+  icon: string;
+}
+
+const { icon } = Astro.props as Props;
+console.log(icon);
+let src;
+switch (icon) {
+  case "Project Matched":
+    src = projectMatched;
+    break;
+  case "Doomsday Rule":
+    src = doomsdayRule;
+    break;
+  case "Hugo First Site":
+    src = hugoSite;
+    break;
+  case "Future Projects":
+    src = futureProjects;
+    break;
+  case "SafeFood4U Website":
+    src = safefood4u;
+    break;
+}
+---
+
+{src && <Image src={src} alt="{} logo" style={"color: white"} />}
