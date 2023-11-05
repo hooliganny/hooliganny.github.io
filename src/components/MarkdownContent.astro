@@ -1,5 +1,9 @@
 ---
-const { classNames } = Astro.props;
+interface Props {
+  classNames?: string;
+}
+
+const { classNames } = Astro.props as Props;
 ---
 
 <div class:list={["flex flex-col prose prose-invert", classNames]}>

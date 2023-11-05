@@ -6,7 +6,7 @@ interface Props {
   highlight?: boolean;
 }
 
-const { href, title, description } = Astro.props;
+const { href, title, description } = Astro.props as Props;
 ---
 
 <li class="link-card">

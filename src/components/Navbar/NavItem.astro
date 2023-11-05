@@ -5,7 +5,7 @@ interface Props {
   transitionName?: string;
 }
 
-const { href, transitionName, name } = Astro.props;
+const { href, transitionName, name } = Astro.props as Props;
 const url = Astro.url.pathname;
 ---
 
