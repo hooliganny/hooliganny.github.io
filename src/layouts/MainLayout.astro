@@ -15,7 +15,7 @@ const { title, heading, subHeading } = Astro.props as Props;
 <Shell title={title}>
   <body>
     <Navbar />
-    <main class="flex flex-col container p-10 gap-12 overflow-y-auto">
+    <main class="flex flex-col container p-10 gap-12">
       {
         heading && subHeading && (
           <header class="flex flex-col gap-3">
@@ -34,6 +34,5 @@ const { title, heading, subHeading } = Astro.props as Props;
   body {
     display: flex;
     background-color: #13151a;
-    height: 100vh;
   }
 </style>
