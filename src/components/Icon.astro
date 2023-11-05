@@ -1,9 +1,9 @@
 ---
-import projectMatched from "../icons/project-matched.svg";
-import doomsdayRule from "../icons/doomsday-rule.svg";
-import hugoSite from "../icons/hugo-site.svg";
-import futureProjects from "../icons/future-projects.svg";
-import safefood4u from "../icons/safefood4u.svg";
+import projectMatched from "../icons/project-matched.svg?raw";
+import doomsdayRule from "../icons/doomsday-rule.svg?raw";
+import hugoSite from "../icons/hugo-site.svg?raw";
+import futureProjects from "../icons/future-projects.svg?raw";
+import safefood4u from "../icons/safefood4u.svg?raw";
 import { Image } from "astro:assets";
 interface Props {
   icon: string;
@@ -25,10 +25,16 @@ switch (icon) {
   case "Future Projects":
     src = futureProjects;
     break;
-  case "SafeFood4U Website":
+  case "SafeFood4U":
     src = safefood4u;
     break;
 }
 ---
 
-{src && <Image src={src} alt="{} logo" style={"color: white"} />}
+{
+  src && (
+    <div class="text-black">
+      <Fragment set:html={src} />
+    </div>
+  )
+}

@@ -1,5 +1,5 @@
 ---
-title: "SafeFood4U Website"
+title: "SafeFood4U"
 date: 2023-02-17T19:34:47+13:00
 description: "A proof of concept webpage for a small business"
 tags: ["Frontend", "HTML", "CSS", "Vue 3", "Nuxt 3", "Node.js", "JS", "TS"]
