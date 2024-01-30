@@ -6,16 +6,18 @@ description: "What's next for me"
 highlight: true
 ---
 
-## About this site
-
-Welcome to my mini-blog, here I will post any significant updates to my portfolio. Each post will have corresponding tags, and links to the right places (if applicable).
-
-My hope is that this site will act as a place where I can both see my growth, as well as showcase it to others.
-
 ## About me
 
-Here is my [LinkedIn](https://www.linkedin.com/in/samuel-white-212330261/), and if you wanna connect, here is my [GitHub](https://github.com/hooliganny) and [Leetcode](https://leetcode.com/hooliganny/).
+My name is Sam and I'm a junior frontend developer. I enjoy learning about the ways the web works and learning all the different ways of approaching the everyday problems we find ourselves in.
 
-Because I have nowhere else at the moment to put this, here is my GitHub commit history. This includes my private repos such as [Project Matched]({{< ref "project-matched" >}}) and [SafeFood4U]({{< ref "safefood4u-website" >}}).
+For work/programming related things, you can find me on [LinkedIn](https://www.linkedin.com/in/samuel-white-212330261/), [GitHub](https://github.com/hooliganny), and [Leetcode](https://leetcode.com/hooliganny/).
 
-![GitHub history](/github_contributions_17_02_2023.png)
+To see what I am currently watching/playing, or to see if you have better taste, you can find me on [IMDb](https://www.imdb.com/user/ur171392741) and [Backloggd](https://www.backloggd.com/u/hooliganny/games/).
+
+## About this site
+
+This is my portfolio site, which I am treating as a mini-blog of sorts. Here I will post any significant updates to my portfolio or resume, or things that I think are just interesting enough to share.
+
+This site is made in Astro 3, and is primarily an excuse to play around with the new View Transitions API and some other frontend frameworks.
+
+My hope is that this site will act as a place where I can both see my growth, as well as showcase it to others.

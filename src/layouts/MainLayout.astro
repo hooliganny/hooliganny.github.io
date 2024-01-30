@@ -25,7 +25,7 @@ const { title, heading, subHeading } = Astro.props as Props;
         )
       }
       <slot />
-      {!(heading && subHeading) && <Back name="Back to projects" />}
+      {!(heading && subHeading) && <Back name="Back to projects" transitionName={"LayoutBack"} />}
     </main>
   </body>
 </Shell>

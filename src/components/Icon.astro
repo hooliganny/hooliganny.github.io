@@ -4,13 +4,11 @@ import doomsdayRule from "../icons/doomsday-rule.svg?raw";
 import hugoSite from "../icons/hugo-site.svg?raw";
 import futureProjects from "../icons/future-projects.svg?raw";
 import safefood4u from "../icons/safefood4u.svg?raw";
-import { Image } from "astro:assets";
 interface Props {
   icon: string;
 }
 
 const { icon } = Astro.props as Props;
-console.log(icon);
 let src;
 switch (icon) {
   case "Project Matched":
@@ -33,7 +31,7 @@ switch (icon) {
 
 {
   src && (
-    <div class="text-black">
+    <div class="text-white">
       <Fragment set:html={src} />
     </div>
   )
