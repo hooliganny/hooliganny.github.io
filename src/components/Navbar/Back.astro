@@ -1,18 +1,17 @@
 ---
 interface Props {
   name: string;
-  transitionName: string;
 }
-const { name, transitionName } = Astro.props as Props;
+const { name } = Astro.props as Props;
 ---
 
 {/* For some reason, this back button isn't persisting */}
-<div id={transitionName} class="cursor-pointer text-lg py-6" transition:persist>
+<div id={"back"} class="cursor-pointer text-lg py-6" transition:persist>
   {name}
 </div>
 
 <script>
-  const button = document.querySelector(`#${transitionName}`);
+  const button = document.querySelector(`#back`);
   button?.addEventListener("click", () => {
     history.back();
   });

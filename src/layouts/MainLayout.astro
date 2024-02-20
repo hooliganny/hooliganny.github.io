@@ -1,5 +1,4 @@
 ---
-import Back from "../components/Navbar/Back.astro";
 import Navbar from "../components/Navbar/Navbar.astro";
 import Shell from "../layouts/Shell.astro";
 
@@ -25,7 +24,6 @@ const { title, heading, subHeading } = Astro.props as Props;
         )
       }
       <slot />
-      {!(heading && subHeading) && <Back name="Back to projects" transitionName={"LayoutBack"} />}
     </main>
   </body>
 </Shell>

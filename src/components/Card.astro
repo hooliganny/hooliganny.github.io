@@ -5,55 +5,38 @@ interface Props {
   description: string;
   href: string;
   highlight?: boolean;
+  index?: number;
 }
 
-const { href, title, description } = Astro.props as Props;
+const { href, title, description, index = 0 } = Astro.props as Props;
 ---
 
-<li class="link-card">
-  <a href={href}>
-    <h2 transition:name={title}>
-      <Icon icon={title} />
-      {title}
-      <span> &rarr;</span>
-    </h2>
-    <p>
-      {description}
-    </p>
+<li
+  class="link-card list-none flex p-px bg-[#23262D] bg-none rounded-lg w-full min-h-[250px]"
+>
+  <a
+    href={href}
+    class:list={[
+      "grid items-center lg:grid-cols-2 p-[calc(1.5rem-1px)] text-white opacity-80 bg-[#23262D] rounded-lg no-underline text-base w-full",
+    ]}
+  >
+    <Icon icon={title} className={`text-white relative w-1/2 m-auto lg:pr-8`} />
+    <div
+      class:list={["mt-8 lg:mt-0 lg:pl-8", index % 2 !== 0 && "lg:-order-1"]}
+    >
+      <h2 transition:name={title} class="m-0 text-xl">
+        {title}
+        <span> &rarr;</span>
+      </h2>
+      <p class="mt-2 mb-0">
+        {description}
+      </p>
+    </div>
   </a>
 </li>
 <style>
-  .link-card {
-    list-style: none;
-    display: flex;
-    padding: 1px;
-    background-color: #23262d;
-    background-image: none;
-    background-size: 400%;
-    border-radius: 7px;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    width: 250px;
-  }
-  .link-card a {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: calc(1.5rem - 1px);
-    border-radius: 8px;
-    color: white;
-    background-color: #23262d;
-    opacity: 0.8;
-  }
   h2 {
-    margin: 0;
-    font-size: 1.25rem;
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  p {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
   }
   .link-card:is(:hover, :focus-within) {
     background-position: 0;

@@ -1,6 +1,6 @@
 ---
-import Back from "./Back.astro";
-import NavItem from "./NavItem.astro";
+import Avatar from "./Avatar.astro";
+import NavItem from "./NavItem.tsx";
 const tabs = [
   { name: "Home", href: "/", transitionName: "home" },
   {
@@ -24,17 +24,23 @@ const tabs = [
     (
       <>
         <div>
+          <figure class="flex items-center justify-center my-5">
+            <a href="/">
+              <Avatar />
+            </a>
+          </figure>
           {tabs.map((tab) => (
             <NavItem
               href={tab.href}
               name={tab.name}
               transitionName={tab.transitionName}
               transition:persist={false}
+              client:only
             />
           ))}
-        </div>
-        <div>
-          <Back name={"Back"} transitionName={"NavbarBack"} />
+          <div>
+            {/* <Back name={"Back"} transitionName={"NavbarBack"} /> */}
+          </div>
         </div>
       </>
     )
