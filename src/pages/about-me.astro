@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { getEntry } from "astro:content";
 import MarkdownContent from "../components/MarkdownContent.astro";
+
 const entry = await getEntry("about", "overview");
 const { Content } = (await entry?.render()) ?? {};
 ---

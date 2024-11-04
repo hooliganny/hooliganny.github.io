@@ -4,12 +4,14 @@ import doomsdayRule from "../icons/doomsday-rule.svg?raw";
 import hugoSite from "../icons/hugo-site.svg?raw";
 import futureProjects from "../icons/future-projects.svg?raw";
 import safefood4u from "../icons/safefood4u.svg?raw";
+
 interface Props {
   icon: string;
   className?: string;
 }
 
 const { icon, className } = Astro.props as Props;
+
 let src;
 switch (icon) {
   case "Project Matched":

@@ -21,6 +21,6 @@ const { Content } = (await entry?.render()) ?? {};
     {entry?.data.title}
   </h2>
   <MarkdownContent>
-    <Content />
+    {Content && <Content />}
   </MarkdownContent>
 </MainLayout>
