@@ -1,6 +1,7 @@
 ---
 import Avatar from "./Avatar.astro";
-import NavItem from "./NavItem.tsx";
+import NavItem from "./NavItem.astro";
+
 const tabs = [
   { name: "Home", href: "/", transitionName: "home" },
   {
@@ -9,40 +10,32 @@ const tabs = [
     transitionName: "projects-nav",
   },
   { name: "About me", href: "/about-me", transitionName: "about" },
-  { name: "Posts", href: "/posts", transitionName: "posts" },
 ];
 ---
 
 {/* Make this a gradient or something more interesting */}
 <nav
-  class="w-1/6 bg-[#00635D] flex flex-col justify-between h-screen sticky top-0"
-  transition:name="nav"
-  transition:animate="slide"
-  transition:persist
+  class="hidden md:flex w-full md:w-1/6 bg-[#00635D] flex-col justify-between h-screen sticky top-0"
 >
-  {
-    (
-      <>
-        <div>
-          <figure class="flex items-center justify-center my-5">
-            <a href="/">
-              <Avatar />
-            </a>
-          </figure>
-          {tabs.map((tab) => (
-            <NavItem
-              href={tab.href}
-              name={tab.name}
-              transitionName={tab.transitionName}
-              transition:persist={false}
-              client:only
-            />
-          ))}
-          <div>
-            {/* <Back name={"Back"} transitionName={"NavbarBack"} /> */}
-          </div>
-        </div>
-      </>
-    )
-  }
+  <div class="p-6">
+    <figure
+      class="flex items-center justify-center my-5 md:w-24 md:h-24 lg:w-32 lg:h-32 mx-auto"
+    >
+      <a href="/" class="w-full h-full">
+        <Avatar />
+      </a>
+    </figure>
+    <ul>
+      {
+        tabs.map((tab) => (
+          <NavItem
+            href={tab.href}
+            name={tab.name}
+            transitionName={tab.transitionName}
+            transition:persist={false}
+          />
+        ))
+      }
+    </ul>
+  </div>
 </nav>
