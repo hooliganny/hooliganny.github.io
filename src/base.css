@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white flex flex-col md:flex-row;
+  }
+
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      270deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 60%,
+      white 100%
+    );
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+  }
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+}
