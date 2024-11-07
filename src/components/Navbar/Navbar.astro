@@ -15,27 +15,32 @@ const tabs = [
 
 {/* Make this a gradient or something more interesting */}
 <nav
-  class="hidden md:flex w-full md:w-1/6 bg-[#00635D] flex-col justify-between h-screen sticky top-0"
+  class="max-w-56 md:w-1/6 w-full h-24 md:h-screen flex bg-primary-green items-center justify-between md:justify-normal md:flex-col sticky top-0 z-10"
 >
-  <div class="p-6">
+  <a href="/about-me" class="p-6">
     <figure
-      class="flex items-center justify-center my-5 md:w-24 md:h-24 lg:w-32 lg:h-32 mx-auto"
+      class="flex flex-col items-center justify-center md:my-5 md:mx-auto"
     >
-      <a href="/" class="w-full h-full">
+      <div class="size-16 md:size-24 lg:size-32">
         <Avatar />
-      </a>
+      </div>
+
+      <figcaption class="text-center text-gray-300 hidden md:block">
+        Sam's Site <br />
+        <i>a.k.a. hooliganny</i>
+      </figcaption>
     </figure>
-    <ul>
-      {
-        tabs.map((tab) => (
-          <NavItem
-            href={tab.href}
-            name={tab.name}
-            transitionName={tab.transitionName}
-            transition:persist={false}
-          />
-        ))
-      }
-    </ul>
+  </a>
+  <div class="w-full flex flex-row md:flex-col gap-6">
+    {
+      tabs.map((tab) => (
+        <NavItem
+          href={tab.href}
+          name={tab.name}
+          transitionName={tab.transitionName}
+          transition:persist={false}
+        />
+      ))
+    }
   </div>
 </nav>
