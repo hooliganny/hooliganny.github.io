@@ -30,18 +30,20 @@ const projects = allProjects.sort(
       />
     )
   }
-  <section class="flex flex-row flex-wrap gap-6">
-    {
-      projects
-        .slice(1)
-        .map((project, index) => (
-          <Card
-            title={project.data.title}
-            description={project.data.description}
-            href={`./projects/${project.slug}`}
-            index={index}
-          />
-        ))
-    }
+  <section>
+    <ul class="grid lg:grid-cols-2 gap-6">
+      {
+        projects
+          .slice(1)
+          .map((project, index) => (
+            <Card
+              title={project.data.title}
+              description={project.data.description}
+              href={`./projects/${project.slug}`}
+              index={index}
+            />
+          ))
+      }
+    </ul>
   </section>
 </MainLayout>

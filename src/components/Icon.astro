@@ -8,9 +8,10 @@ import safefood4u from "../icons/safefood4u.svg?raw";
 interface Props {
   icon: string;
   className?: string;
+  transitionName?: string;
 }
 
-const { icon, className } = Astro.props as Props;
+const { icon, className, transitionName } = Astro.props as Props;
 
 let src;
 switch (icon) {
@@ -34,7 +35,7 @@ switch (icon) {
 
 {
   src && (
-    <div class={className}>
+    <div class={className} transition:name={transitionName}>
       <Fragment set:html={src} />
     </div>
   )

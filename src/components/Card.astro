@@ -13,15 +13,19 @@ const { href, title, description, index = 0 } = Astro.props as Props;
 ---
 
 <li
-  class="link-card list-none flex p-px bg-[#23262D] bg-none rounded-lg w-full min-h-[250px]"
+  class="hover:scale-105 transition-all duration-300 link-card flex p-px bg-white bg-none rounded-lg w-full min-h-[250px]"
 >
   <a
     href={href}
     class:list={[
-      "grid items-center lg:grid-cols-2 p-[calc(1.5rem-1px)] text-white opacity-80 bg-[#23262D] rounded-lg no-underline text-base w-full",
+      "transition-all grid items-center lg:grid-cols-2 p-[calc(1.5rem-1px)] text-black opacity-80 rounded-lg no-underline text-base w-full",
     ]}
   >
-    <Icon icon={title} className={`text-white relative w-1/2 m-auto lg:pr-8`} />
+    <Icon
+      icon={title}
+      transitionName={`${title}-icon`}
+      className={`text-primary-green relative w-1/2 m-auto lg:pr-8`}
+    />
     <div
       class:list={["mt-8 lg:mt-0 lg:pl-8", index % 2 !== 0 && "lg:-order-1"]}
     >
@@ -36,14 +40,22 @@ const { href, title, description, index = 0 } = Astro.props as Props;
   </a>
 </li>
 <style>
-  h2 {
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  .link-card {
+    background-image: linear-gradient(90deg, #fff, #fff);
+    /* background-size: 200% 100%; */
   }
+
   .link-card:is(:hover, :focus-within) {
-    background-position: 0;
     background-image: var(--accent-gradient);
+    /* animation: gradient-sweep 3s ease-in-out forwards; */
   }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent-light));
-  }
+
+  /* @keyframes gradient-sweep {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  } */
 </style>
