@@ -22,10 +22,13 @@ const { Content } = (await entry?.render()) ?? {};
     <Icon
       transitionName={`${entry?.data.title}-icon`}
       icon={entry?.data?.title || ""}
-      className={`text-primary-green relative size-40 m-auto lg:pr-8`}
+      className={`text-primary-purple relative size-40 m-auto lg:pr-8`}
     />
 
-    <h2 transition:name={entry?.data.title} class="text-4xl">
+    <h2
+      transition:name={entry?.data.title}
+      class="text-4xl text-primary-purple"
+    >
       {entry?.data.title}
     </h2>
   </header>

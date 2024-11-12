@@ -5,8 +5,12 @@ export default {
     extend: {
       colors: {
         "primary-green": "#00635D",
+        "primary-purple": "var(--accent)",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-animated"),
+  ],
 };

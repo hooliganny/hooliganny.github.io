@@ -8,13 +8,12 @@
   }
 
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
+    --accent: rgb(136, 58, 234);
+    --accent-light: rgb(224, 204, 250);
     --accent-gradient: linear-gradient(
       270deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 60%,
+      var(--accent),
+      var(--accent-light) 60%,
       white 100%
     );
   }
@@ -35,3 +34,11 @@
       monospace;
   }
 }
+
+@layer utilities {
+  .nav-border {
+    border-right-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, var(--accent), rgba(0, 0, 0, 0)) 1
+      100%;
+  }
