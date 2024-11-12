@@ -42,3 +42,8 @@
     border-image: linear-gradient(to bottom, var(--accent), rgba(0, 0, 0, 0)) 1
       100%;
   }
+
+  .navbar-image {
+    view-transition-name: avatar;
+  }
+}

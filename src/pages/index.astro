@@ -1,15 +1,19 @@
 ---
 import EntryLayout from "../layouts/EntryLayout.astro";
+import InteractiveProfilePicture from "../components/InteractiveProfilePicture.tsx";
 ---
 
 <EntryLayout title="Home | hooliganny">
-  <h1 class="text-3xl">
-    Welcome to <span class="text-gradient" transition:name="name">
-      my portfolio site
-    </span>
-  </h1>
+  <header
+    class="flex flex-col items-center justify-center text-center w-screen h-screen"
+  >
+    <div class="navbar-image size-32">
+      <InteractiveProfilePicture client:only />
+    </div>
+    <h1 class="text-4xl">Welcome</h1>
 
-  <h2 class="" transition:name="projects">
-    <a href="/projects">Click anywhere to enter</a>
-  </h2>
+    <h2 class="text-xl" transition:name="projects">
+      <a href="/projects">Click to Enter</a>
+    </h2>
+  </header>
 </EntryLayout>
