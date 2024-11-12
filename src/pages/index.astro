@@ -4,16 +4,13 @@ import InteractiveProfilePicture from "../components/InteractiveProfilePicture.t
 ---
 
 <EntryLayout title="Home | hooliganny">
-  <header
-    class="flex flex-col items-center justify-center text-center w-screen h-screen"
-  >
-    <div class="navbar-image size-32">
-      <InteractiveProfilePicture client:only />
-    </div>
-    <h1 class="text-4xl">Welcome</h1>
+  <div class="navbar-image size-96 mt-16">
+    <InteractiveProfilePicture client:only />
+  </div>
 
-    <h2 class="text-xl" transition:name="projects">
-      <a href="/projects">Click to Enter</a>
-    </h2>
+  <header>
+    <h1 class="text-4xl text-primary-purple">Welcome</h1>
+
+    <h2 class="text-xl" transition:name="projects">Click to Enter</h2>
   </header>
 </EntryLayout>

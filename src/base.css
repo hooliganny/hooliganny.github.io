@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white flex flex-col md:flex-row;
+    @apply bg-[#13151a] text-white flex flex-col md:flex-row;
   }
 
   :root {
@@ -46,4 +46,23 @@
   .navbar-image {
     view-transition-name: avatar;
   }
+
+  .link-card {
+    background-image: linear-gradient(90deg, #fff, #fff);
+    /* background-size: 200% 100%; */
+  }
+
+  .link-card:is(:hover, :focus-within) {
+    background-image: var(--accent-gradient);
+    /* animation: gradient-sweep 3s ease-in-out forwards; */
+  }
+
+  /* @keyframes gradient-sweep {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  } */
 }
