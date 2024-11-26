@@ -7,6 +7,7 @@ const projectCollection = defineCollection({
     tags: z.array(z.string()),
     description: z.string(),
     date: z.date(),
+    updatedDate: z.date().optional(),
     highlight: z.boolean().optional(),
   }),
 });

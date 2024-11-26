@@ -31,6 +31,17 @@ const { Content } = (await entry?.render()) ?? {};
     >
       {entry?.data.title}
     </h2>
+    <h3>
+      Written: {new Date(entry?.data?.date || "").toDateString()}
+      {
+        entry?.data?.updatedDate && (
+          <>
+            <br />
+            Updated: {new Date(entry?.data?.updatedDate || "").toDateString()}
+          </>
+        )
+      }
+    </h3>
   </header>
   <MarkdownContent>
     {Content && <Content />}
