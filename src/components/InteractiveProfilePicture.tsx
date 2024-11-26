@@ -33,7 +33,7 @@ const RotatableDisc = () => {
       {/* Edge to add thickness, rotated to align with the circle */}
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <cylinderGeometry args={[1, 1, 0.1, 32, 1, true]} />
-        <meshBasicMaterial color="white" side={THREE.DoubleSide} />
+        <meshBasicMaterial color={new THREE.Color("#00635D")} />
       </mesh>
     </group>
   );
