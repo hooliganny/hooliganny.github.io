@@ -9,7 +9,7 @@ interface Props {
   index?: number;
 }
 
-const { href, title, description, index = 0 } = Astro.props as Props;
+const { href, title, description, index = 0, highlight } = Astro.props as Props;
 ---
 
 <li
@@ -18,13 +18,13 @@ const { href, title, description, index = 0 } = Astro.props as Props;
   <a
     href={href}
     class:list={[
-      "transition-all grid items-center lg:grid-cols-2 p-[calc(1.5rem-1px)] text-black opacity-80 rounded-lg no-underline text-base w-full",
+      "transition-all grid items-center lg:grid-cols-2 p-6 text-black opacity-80 rounded-lg text-base w-full",
     ]}
   >
     <Icon
       icon={title}
       transitionName={`${title}-icon`}
-      className={`text-primary-green relative w-1/2 m-auto lg:pr-8`}
+      className={`text-primary-green relative m-auto lg:pr-8 ${highlight ? "w-56" : "w-24"}`}
     />
     <div
       class:list={["mt-8 lg:mt-0 lg:pl-8", index % 2 !== 0 && "lg:-order-1"]}
