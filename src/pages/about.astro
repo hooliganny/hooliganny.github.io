@@ -9,8 +9,8 @@ const { Content } = (await entry?.render()) ?? {};
 
 <MainLayout
   title="About | hooliganny"
-  heading="About"
-  subHeading="Stuff and things relating to me, as well as the site"
+  heading={entry?.data?.title}
+  subHeading={entry?.data?.description}
 >
   <MarkdownContent>
     <Content />

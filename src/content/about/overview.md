@@ -1,23 +1,24 @@
 ---
-title: "Future Projects"
+title: "About"
 date: 2023-10-29T20:00:00+13:00
-tags: []
-description: "What's next for me"
-highlight: true
+updatedDate: 2024-11-26T16:50:00+13:00
+description: "Stuff and things relating to me, as well as the site"
 ---
 
 ## About me
 
-My name is Sam and I'm a Full Stack Developer. I enjoy learning about the ways the web works and learning all the different ways of approaching the everyday problems we find ourselves in.
+Hi there! I'm Sam, a Full Stack Developer based in New Zealand. I love diving into the intricacies of how the web works and exploring different approaches to solving the everyday challenges we encounter. Coding and problem-solving are not just my job - they’re things I genuinely enjoy.
+
+I have professional experience working in team environments, building projects with modern tools like Next.js, and crafting solutions that solve problems that users actually experience in their day to day lives.
 
 For work/programming related things, you can find me on [LinkedIn](https://www.linkedin.com/in/samuel-white-212330261/), [GitHub](https://github.com/hooliganny), and [Leetcode](https://leetcode.com/hooliganny/).
 
-To see what I am currently watching/playing, or to see if you have better taste, you can find me on [IMDb](https://www.imdb.com/user/ur171392741) and [Backloggd](https://www.backloggd.com/u/hooliganny/games/).
+I have a life outside of work too, so if you want to see what I am currently watching/playing - and see if you have better tastes - you can find me on [IMDb](https://www.imdb.com/user/ur171392741) and [Backloggd](https://www.backloggd.com/u/hooliganny/games/user-rating/).
 
 ## About this site
 
-This is my portfolio site, which I am treating as a mini-blog of sorts. Here I will post any significant updates to my portfolio or resume, or things that I think are just interesting enough to share.
+Think of this site as part portfolio, part blog - here I will share significant updates to my portfolio or resume, or things that I think are just interesting enough to share.
 
-This site is made in Astro, and is primarily an excuse to play around with the new View Transitions API, other CSS features, and some other frontend frameworks - courtesy of Astro Islands.
+This site is made in Astro, and is primarily an excuse for me to play around with unfamiliar and emerging web technologies - such as the new View Transitions API (natively supported in Astro), CSS scroll-driven animations, some new frontend frameworks - courtesy of Astro Islands, and more.
 
-My hope is that this site will act as a place where I can both see my growth, as well as showcase it to others.
+My hope is that this site becomes both a record of my growth and a way to showcase it to others.
