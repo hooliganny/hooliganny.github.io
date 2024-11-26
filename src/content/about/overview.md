@@ -18,6 +18,6 @@ To see what I am currently watching/playing, or to see if you have better taste,
 
 This is my portfolio site, which I am treating as a mini-blog of sorts. Here I will post any significant updates to my portfolio or resume, or things that I think are just interesting enough to share.
 
-This site is made in Astro, and is primarily an excuse to play around with the new View Transitions API and some other frontend frameworks.
+This site is made in Astro, and is primarily an excuse to play around with the new View Transitions API, other CSS features, and some other frontend frameworks - courtesy of Astro Islands.
 
 My hope is that this site will act as a place where I can both see my growth, as well as showcase it to others.
