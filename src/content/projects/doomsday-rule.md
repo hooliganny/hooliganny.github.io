@@ -2,7 +2,7 @@
 title: "Doomsday Rule"
 date: 2023-10-07T12:00:00+13:00
 tags: []
-description: "A way of working out what day any date will fall on"
+description: "Calculate the day for any date"
 ---
 
 ## What
