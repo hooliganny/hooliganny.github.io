@@ -16,3 +16,7 @@ This was made in React to broaden my horizons (as previously I had only worked i
 ## Why
 
 While I was searching for a job, I was looking for a way of improving my skills, and learning more technologies that I can use to apply my skills in the workplace. I also wanted to work on something that few people knew about, and that fewer people had done before. I was able to find a few online calculators, but I wanted my work to be more of a learning tool, so that someone who doesn't know the rule can learn from nothing, but also that someone who does know can test themself.
+
+## Where
+
+You will see a live version of the project [here](/projects/doomsday-rule)!
