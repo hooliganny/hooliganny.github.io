@@ -7,7 +7,7 @@ description: "Stuff and things relating to me, as well as the site"
 
 ## About me
 
-Hi there! I'm Sam, a Full Stack Developer based in New Zealand. I love diving into the intricacies of how the web works and exploring different approaches to solving the everyday challenges we encounter. Coding and problem-solving are not just my job - they’re things I genuinely enjoy.
+Hi there! I'm Sam, a Full Stack Developer based in New Zealand. I love diving into the intricacies of how the web works and exploring different approaches to solving the everyday challenges we encounter. Coding and problem-solving are not just my job - they're things I genuinely enjoy.
 
 I have professional experience working in team environments, building projects with modern tools like Next.js, and crafting solutions that solve problems that users actually experience in their day to day lives.
 
