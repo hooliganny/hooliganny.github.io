@@ -3,7 +3,6 @@ import Avatar from "./Avatar.astro";
 import NavItem from "./NavItem.astro";
 
 const tabs = [
-  { name: "Home", href: "/", transitionName: "home" },
   {
     name: "Projects",
     href: "/projects",
@@ -17,7 +16,7 @@ const tabs = [
 <nav
   class="bg-primary-green border-b-2 border-primary-purple md:border-none md:nav-border md:max-w-56 md:w-1/6 w-full h-24 md:h-screen flex items-center justify-between md:justify-normal md:flex-col sticky top-0 z-10"
 >
-  <a href="/about" class="p-6 hover:scale-105 duration-500">
+  <a href="/" class="p-6 hover:scale-105 duration-500">
     <figure
       class="flex flex-col items-center justify-center md:my-5 md:mx-auto"
     >
@@ -25,9 +24,7 @@ const tabs = [
         <Avatar />
       </div>
 
-      <figcaption class="text-center text-gray-300 hidden md:block">
-        hooliganny
-      </figcaption>
+      <figcaption class="text-center text-lg hidden md:block">Home</figcaption>
     </figure>
   </a>
   <div class="w-full flex flex-row md:flex-col gap-6">
