@@ -7,13 +7,13 @@ description: "Stuff and things relating to me, as well as the site"
 
 ## About me
 
-Hi there! I'm Sam, a Full Stack Developer based in New Zealand. I love diving into the intricacies of how the web works and exploring different approaches to solving the everyday challenges we encounter. Coding and problem-solving are not just my job - they're things I genuinely enjoy.
+Hi there! I'm Sam (I go by hooliganny online), a Full Stack Developer based in New Zealand. I love diving into the intricacies of how the web works and exploring different approaches to solving the everyday challenges we encounter. Coding and problem-solving are not just my job - they're things I genuinely enjoy.
 
 I have professional experience working in team environments, building projects with modern tools like Next.js, and crafting solutions that solve problems that users actually experience in their day to day lives.
 
 For work/programming related things, you can find me on [LinkedIn](https://www.linkedin.com/in/samuel-white-212330261/), [GitHub](https://github.com/hooliganny), and [Leetcode](https://leetcode.com/hooliganny/).
 
-I have a life outside of work too, so if you want to see what I am currently watching/playing - and see if you have better tastes - you can find me on [IMDb](https://www.imdb.com/user/ur171392741) and [Backloggd](https://www.backloggd.com/u/hooliganny/games/user-rating/).
+I have a life outside of work too, so if you want to see what I am currently watching/playing/listening to - and see if you have better tastes - you can find me on [IMDb](https://www.imdb.com/user/ur171392741), [Backloggd](https://www.backloggd.com/u/hooliganny/games/user-rating/), and [Rate Your Music](https://rateyourmusic.com/~Sammyman135).
 
 ## About this site
 
