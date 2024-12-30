@@ -1,0 +1,29 @@
+---
+import Navbar from "../components/Navbar/Navbar.astro";
+import Shell from "../layouts/Shell.astro";
+
+interface Props {
+  title: string;
+  heading?: string;
+  subHeading?: string;
+}
+
+const { title, heading, subHeading } = Astro.props as Props;
+---
+
+<Shell title={title}>
+  <body>
+    <Navbar />
+    <main class="flex flex-col container p-10 gap-12 mx-auto">
+      {
+        heading && subHeading && (
+          <header class="flex flex-col gap-3">
+            <h2 class="text-4xl text-primary-purple">{heading}</h2>
+            <h3 class="text-xl">{subHeading}</h3>
+          </header>
+        )
+      }
+      <slot />
+    </main>
+  </body>
+</Shell>

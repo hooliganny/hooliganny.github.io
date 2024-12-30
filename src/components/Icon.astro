@@ -1,0 +1,42 @@
+---
+import projectMatched from "../icons/project-matched.svg?raw";
+import doomsdayRule from "../icons/doomsday-rule.svg?raw";
+import hugoSite from "../icons/hugo-site.svg?raw";
+import futureProjects from "../icons/future-projects.svg?raw";
+import safefood4u from "../icons/safefood4u.svg?raw";
+
+interface Props {
+  icon: string;
+  className?: string;
+  transitionName?: string;
+}
+
+const { icon, className, transitionName } = Astro.props as Props;
+
+let src;
+switch (icon) {
+  case "Project Matched":
+    src = projectMatched;
+    break;
+  case "Doomsday Rule":
+    src = doomsdayRule;
+    break;
+  case "My First Site":
+    src = hugoSite;
+    break;
+  case "Future Projects":
+    src = futureProjects;
+    break;
+  case "SafeFood4U":
+    src = safefood4u;
+    break;
+}
+---
+
+{
+  src && (
+    <div class={className} transition:name={transitionName}>
+      <Fragment set:html={src} />
+    </div>
+  )
+}

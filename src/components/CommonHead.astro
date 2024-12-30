@@ -1,0 +1,20 @@
+---
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+import "../base.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/kikwi.webp" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <ViewTransitions />
+</head>
