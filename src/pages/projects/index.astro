@@ -24,7 +24,7 @@ const projects = allProjects.sort(
       <Card
         title={highlightProject.data.title}
         description={highlightProject.data.description}
-        href={`./projects/${highlightProject.slug}`}
+        href={`/projects/${highlightProject.slug}`}
         highlight={highlightProject.data.highlight}
         index={0}
       />
@@ -39,7 +39,7 @@ const projects = allProjects.sort(
             <Card
               title={project.data.title}
               description={project.data.description}
-              href={`./projects/${project.slug}`}
+              href={`/projects/${project.slug}`}
               index={index}
             />
           ))
