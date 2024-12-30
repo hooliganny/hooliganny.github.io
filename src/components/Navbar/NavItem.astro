@@ -1,0 +1,14 @@
+---
+const { name, href = "#", transitionName } = Astro.props;
+---
+
+<a
+  href={href}
+  {...transitionName ? { [`transition:name`]: transitionName } : {}}
+>
+  <div
+    class="w-full py-6 text-center text-lg hover:text-black hover:bg-white hover:scale-105 duration-300"
+  >
+    {name}
+  </div>
+</a>

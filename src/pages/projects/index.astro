@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../../components/Card.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const allProjects = await getCollection("projects");
+
+const highlightProject = allProjects.find((project) => project.data.highlight);
+
+const projects = allProjects.sort(
+  (project1, project2) =>
+    new Date(project2.data.date).getTime() -
+    new Date(project1.data.date).getTime(),
+);
+---
+
+<MainLayout
+  title="Projects | hooliganny"
+  heading="My Projects"
+  subHeading="Discover what I've built"
+>
+  {
+    highlightProject && (
+      <Card
+        title={highlightProject.data.title}
+        description={highlightProject.data.description}
+        href={`./projects/${highlightProject.slug}`}
+        highlight={highlightProject.data.highlight}
+        index={0}
+      />
+    )
+  }
+  <section>
+    <ul class="grid lg:grid-cols-2 gap-6">
+      {
+        projects
+          .slice(1)
+          .map((project, index) => (
+            <Card
+              title={project.data.title}
+              description={project.data.description}
+              href={`./projects/${project.slug}`}
+              index={index}
+            />
+          ))
+      }
+    </ul>
+  </section>
+</MainLayout>

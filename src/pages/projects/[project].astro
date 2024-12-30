@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntry } from "astro:content";
+import MarkdownContent from "../../components/MarkdownContent.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Icon from "../../components/Icon.astro";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const allProjects = await getCollection("projects");
+  return allProjects.map((project) => {
+    return { params: { project: project.slug } };
+  });
+};
+
+const entry = await getEntry("projects", Astro?.params?.project as string);
+
+const { Content } = (await entry?.render()) ?? {};
+---
+
+<MainLayout title={`${entry?.data.title} | hooliganny`}>
+  <header>
+    <Icon
+      transitionName={`${entry?.data.title}-icon`}
+      icon={entry?.data?.title || ""}
+      className={`text-primary-purple relative size-40 m-auto lg:pr-8`}
+    />
+
+    <h2
+      transition:name={entry?.data.title}
+      class="text-4xl text-primary-purple"
+    >
+      {entry?.data.title}
+    </h2>
+    <h3>
+      Written: {new Date(entry?.data?.date || "").toDateString()}
+      {
+        entry?.data?.updatedDate && (
+          <>
+            <br />
+            Updated: {new Date(entry?.data?.updatedDate || "").toDateString()}
+          </>
+        )
+      }
+    </h3>
+  </header>
+  <MarkdownContent>
+    {Content && <Content />}
+  </MarkdownContent>
+</MainLayout>

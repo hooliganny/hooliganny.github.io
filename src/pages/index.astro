@@ -1,0 +1,16 @@
+---
+import EntryLayout from "../layouts/EntryLayout.astro";
+import InteractiveProfilePicture from "../components/InteractiveProfilePicture.tsx";
+---
+
+<EntryLayout title="Home | hooliganny">
+  <div class="navbar-image size-96 mt-16">
+    <InteractiveProfilePicture client:only="react" />
+  </div>
+
+  <header>
+    <h1 class="text-4xl text-primary-purple">Welcome</h1>
+
+    <h2 class="text-xl" transition:name="projects">Click to Enter</h2>
+  </header>
+</EntryLayout>
