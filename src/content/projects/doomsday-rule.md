@@ -19,4 +19,4 @@ While I was searching for a job, I was looking for a way of improving my skills,
 
 ## Where
 
-You will see a live version of the project [here](/projects/doomsday-rule/live)!
+You will see a live version of the project [here](/doomsday-rule-practise)!
