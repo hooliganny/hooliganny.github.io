@@ -57,23 +57,6 @@
     /* animation: gradient-sweep 3s ease-in-out forwards; */
   }
 
-  .primary-grid {
-    --primary-grid-rgb: 0 99 93;
-    --primary-grid-opacity: 0.35;
-
-    background-image: linear-gradient(
-        to right,
-        rgb(var(--primary-grid-rgb) / var(--primary-grid-opacity)) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        to bottom,
-        rgb(var(--primary-grid-rgb) / var(--primary-grid-opacity)) 1px,
-        transparent 1px
-      );
-    background-size: 5rem 5rem;
-  }
-
   /* @keyframes gradient-sweep {
     0% {
       background-position: 0% 50%;
