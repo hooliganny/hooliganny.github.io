@@ -27,22 +27,3 @@ const { title, heading, subHeading } = Astro.props as Props;
     </main>
   </body>
 </Shell>
-
-<style>
-  body {
-    --primary-grid-rgb: 0 99 93;
-    --primary-grid-opacity: 0.35;
-
-    background-image: linear-gradient(
-        to right,
-        rgb(var(--primary-grid-rgb) / var(--primary-grid-opacity)) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        to bottom,
-        rgb(var(--primary-grid-rgb) / var(--primary-grid-opacity)) 1px,
-        transparent 1px
-      );
-    background-size: 5rem 5rem;
-  }
-</style>
