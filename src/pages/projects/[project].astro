@@ -19,9 +19,9 @@ const { Content } = (await entry?.render()) ?? {};
 
 <MainLayout title={`${entry?.data.title} | hooliganny`}>
   <header
-    class="flex flex-row border bg-primary-green/70 border-white p-6 rounded-lg w-full"
+    class="flex flex-col gap-3 md:flex-row md:gap-0 border bg-primary-green/70 border-white p-6 rounded-lg w-full shadow-[inset_0_0_20px_0_var(--accent)]"
   >
-    <div class="flex-grow">
+    <div class="w-full flex flex-col gap-3">
       <h2
         transition:name={entry?.data.title}
         class="text-4xl text-primary-purple"
@@ -42,7 +42,7 @@ const { Content } = (await entry?.render()) ?? {};
 
       {
         entry?.data?.live_link && (
-          <p>
+          <p class="break-all">
             Live Link:{" "}
             <a
               href={entry?.data?.live_link}
@@ -58,7 +58,7 @@ const { Content } = (await entry?.render()) ?? {};
     <Icon
       transitionName={`${entry?.data.title}-icon`}
       icon={entry?.data?.title || ""}
-      className={`text-primary-purple size-20`}
+      className={`-order-1 md:order-1 flex-shrink-0 text-primary-purple size-16 md:size-20`}
     />
   </header>
   <MarkdownContent>

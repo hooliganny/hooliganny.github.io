@@ -20,4 +20,4 @@ While I was searching for a job, I was looking for a way of improving my skills,
 
 ## Where
 
-Click [here](/doomsday-rule-practise) or the link in the header to see a live version of the project!
+Click [here](https://hooliganny.github.io/doomsday-rule-practise) or the link in the header to see a live version of the project!
