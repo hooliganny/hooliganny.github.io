@@ -3,6 +3,7 @@ title: "SafeFood4U"
 date: 2023-02-17T19:34:47+13:00
 description: "A proof of concept webpage for a small business"
 tags: ["Frontend", "HTML", "CSS", "Vue 3", "Nuxt 3", "Node.js", "JS", "TS"]
+live_link: https://www.safefood4u.com.au/
 ---
 
 Over my summer break after my last year of university (2022), I worked off and on creating a portfolio website for my father's family business.

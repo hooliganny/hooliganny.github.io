@@ -18,30 +18,48 @@ const { Content } = (await entry?.render()) ?? {};
 ---
 
 <MainLayout title={`${entry?.data.title} | hooliganny`}>
-  <header>
+  <header
+    class="flex flex-col gap-3 md:flex-row md:gap-0 border bg-primary-green/70 border-white p-6 rounded-lg w-full shadow-[inset_0_0_20px_0_var(--accent)]"
+  >
+    <div class="w-full flex flex-col gap-3">
+      <h2
+        transition:name={entry?.data.title}
+        class="text-4xl text-primary-purple"
+      >
+        {entry?.data.title}
+      </h2>
+      <h3>
+        Written: {new Date(entry?.data?.date || "").toDateString()}
+        {
+          entry?.data?.updatedDate && (
+            <>
+              <br />
+              Updated: {new Date(entry?.data?.updatedDate || "").toDateString()}
+            </>
+          )
+        }
+      </h3>
+
+      {
+        entry?.data?.live_link && (
+          <p class="break-all">
+            Live Link:{" "}
+            <a
+              href={entry?.data?.live_link}
+              class="underline text-primary-purple"
+            >
+              {entry?.data.live_link}
+            </a>
+          </p>
+        )
+      }
+    </div>
+
     <Icon
       transitionName={`${entry?.data.title}-icon`}
       icon={entry?.data?.title || ""}
-      className={`text-primary-purple relative size-40 m-auto lg:pr-8`}
+      className={`-order-1 md:order-1 flex-shrink-0 text-primary-purple size-16 md:size-20`}
     />
-
-    <h2
-      transition:name={entry?.data.title}
-      class="text-4xl text-primary-purple"
-    >
-      {entry?.data.title}
-    </h2>
-    <h3>
-      Written: {new Date(entry?.data?.date || "").toDateString()}
-      {
-        entry?.data?.updatedDate && (
-          <>
-            <br />
-            Updated: {new Date(entry?.data?.updatedDate || "").toDateString()}
-          </>
-        )
-      }
-    </h3>
   </header>
   <MarkdownContent>
     {Content && <Content />}

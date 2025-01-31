@@ -3,6 +3,7 @@ title: "Doomsday Rule"
 date: 2023-10-07T12:00:00+13:00
 tags: []
 description: "Calculate the day for any date"
+live_link: https://hooliganny.github.io/doomsday-rule-practise
 ---
 
 ## What
@@ -19,4 +20,4 @@ While I was searching for a job, I was looking for a way of improving my skills,
 
 ## Where
 
-You will see a live version of the project [here](/doomsday-rule-practise)!
+Click [here](https://hooliganny.github.io/doomsday-rule-practise) or the link in the header to see a live version of the project!

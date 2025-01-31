@@ -6,6 +6,11 @@ interface Props {
 const { classNames } = Astro.props as Props;
 ---
 
-<div class:list={["flex flex-col prose prose-invert max-w-none", classNames]}>
+<div
+  class:list={[
+    "flex flex-col prose prose-invert max-w-none [&>iframe]:self-center prose-a:text-primary-purple",
+    classNames,
+  ]}
+>
   <slot />
 </div>
