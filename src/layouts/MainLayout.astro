@@ -14,7 +14,8 @@ const { title, heading, subHeading } = Astro.props as Props;
 <Shell title={title}>
   <body>
     <Navbar />
-    <main class="flex flex-col container p-10 gap-12 mx-auto primary-grid">
+    <div class="primary-grid fixed -z-10 w-full h-full"></div>
+    <main class="flex flex-col container p-10 gap-12 mx-auto">
       {
         heading && subHeading && (
           <header class="flex flex-col gap-3">
