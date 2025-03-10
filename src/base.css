@@ -44,25 +44,6 @@
     view-transition-name: avatar;
   }
 
-  .link-card {
-    background-image: linear-gradient(90deg, #fff, #fff);
-    /* background-size: 200% 100%; */
-  }
-
-  .link-card:is(:hover, :focus-within) {
-    background-image: var(--accent-gradient);
-    /* animation: gradient-sweep 3s ease-in-out forwards; */
-  }
-
-  /* @keyframes gradient-sweep {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  } */
-
   .primary-grid {
     --primary-grid-rgb: 0 99 93;
     --primary-grid-opacity: 0.35;
@@ -88,4 +69,17 @@
       #1b1464
     );
   }
+}
+
+.link-card::before {
+  content: "";
+  @apply absolute w-full h-full inset-0 opacity-0 transition-all duration-500 -z-[1] theme-linear-gradient rounded-lg;
+}
+
+.link-card:hover::before {
+  opacity: 1;
+}
+
+.link-card:hover .icon {
+  color: white !important;
 }

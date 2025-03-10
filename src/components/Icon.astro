@@ -35,7 +35,7 @@ switch (icon) {
 
 {
   src && (
-    <div class={className} transition:name={transitionName}>
+    <div class:list={["icon", className]} transition:name={transitionName}>
       <Fragment set:html={src} />
     </div>
   )
