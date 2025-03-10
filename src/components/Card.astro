@@ -12,19 +12,17 @@ interface Props {
 const { href, title, description, index = 0, highlight } = Astro.props as Props;
 ---
 
-<li
-  class="hover:scale-105 transition-all duration-300 link-card flex p-px bg-white bg-none rounded-lg w-full min-h-[250px]"
->
+<li class="list-none relative">
   <a
     href={href}
     class:list={[
-      "transition-all grid items-center lg:grid-cols-2 p-6 text-black opacity-80 rounded-lg text-base w-full",
+      "hover:scale-105 transition-all duration-300 link-card bg-white bg-none rounded-lg w-full min-h-[250px] grid items-center lg:grid-cols-2 p-6 text-black hover:text-white hover:opacity-80 text-base",
     ]}
   >
     <Icon
       icon={title}
       transitionName={`${title}-icon`}
-      className={`text-primary-green relative m-auto lg:pr-8 ${highlight ? "w-56" : "w-24"}`}
+      className={`text-primary-green relative m-auto lg:pr-8 icon transition-colors duration-300 ${highlight ? "w-56" : "w-24"}`}
     />
     <div
       class:list={["mt-8 lg:mt-0 lg:pl-8", index % 2 !== 0 && "lg:-order-1"]}
